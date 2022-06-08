@@ -8,9 +8,10 @@ from pathlib import Path
 import json
 from utils_selenium import *
 
+
 def main():
-    Path('./Data').mkdir(parents=True, exist_ok=True)
-    
+    Path("./Data").mkdir(parents=True, exist_ok=True)
+
     driver = get_driver()
     driver.get("https://ceop.apr.gov.rs/ceopweb/sr-cyrl/home")
 
@@ -30,35 +31,78 @@ def main():
         )
     )
 
-    # extract requests from logs
-    logs_raw = driver.get_log("performance")
-    logs = [json.loads(lr["message"])["message"] for lr in logs_raw]
+    def get_resp(api_endpoint):
+        logs_raw = driver.get_log("performance")
+        logs = [json.loads(lr["message"])["message"] for lr in logs_raw]
+        logs = [x for x in logs if "response" in x["params"]]
+        logs = [
+            x
+            for x in logs
+            if x["method"] == "Network.responseReceived"
+            and "json" in x["params"]["response"]["mimeType"]
+        ]
+        logs = [x for x in logs if api_endpoint in x["params"]["response"]["url"]]
 
-    def log_filter(log_):
-        return (
-            # is an actual response
-            log_["method"] == "Network.responseReceived"
-            # and json
-            and "json" in log_["params"]["response"]["mimeType"]
-        )
-
-    for log in filter(log_filter, logs):
+        log = list(logs)[0]
         request_id = log["params"]["requestId"]
         resp_url = log["params"]["response"]["url"]
-
-        # skip data from links
-        if (
-            "/ceopapi/api/search/filters" in resp_url or
-            "/ceopapi/api/search/getChartsData" in resp_url
-        ):
-            continue
-        
         print(f"Caught {resp_url}")
-        print(driver.execute_cdp_cmd("Network.getResponseBody", {"requestId": request_id}))
+        resp_json = json.loads(
+            driver.execute_cdp_cmd(
+                "Network.getResponseBody", {"requestId": request_id}
+            )["body"]
+        )
+        return resp_json
+
+    soup = BeautifulSoup(driver.page_source, "html.parser")
+    nbr_of_pages = int(
+        soup.find("li", {"class": "ellipsis"})
+        .next_sibling.text.split("page")[-1]
+        .strip()
+    )
+    for page in range(0, 3):
+        response_json = get_resp("searchString")
+        df = pd.DataFrame(response_json["ResultList"])
+
+        # Predmeti
+        for submission_id in response_json["ResultList"]:
+            row_id = response_json["ResultList"].index(submission_id)
+            print(f"Clicked on row {row_id}")
+
+            driver.find_element(
+                by=By.CSS_SELECTOR,
+                value=f"body > rd-app > div > rd-home > div > rd-search > div > div > div > table > tbody > tr:nth-child({row_id+2})",
+            ).click()
+
+            # Wait to load (TO DO: implement Wait)
+            time.sleep(3)
+
+            # Lista predmeta u dosijeu
+            submission_resp = get_resp("getAllCaseDetails")
+            print(
+                f"Found: {len(submission_resp)} cases for {submission_id['SubmissionId']}"
+            )
+            df_inner = pd.DataFrame(submission_resp)
+            df_inner.rename(columns={"SubmissionId": "InnerSubmissionId"}, inplace=True)
+            df_inner["SubmissionId"] = submission_id["SubmissionId"]
+            merged_df = pd.merge(df, df_inner, how="outer", on="SubmissionId")
+            merged_df.sort_values(by="SubmissionId", inplace=True, ascending=False)
+            merged_df.dropna(subset=["InnerSubmissionId"], inplace=True)
+            merged_df.to_csv(
+                "./Data/Data.csv",
+                index=False,
+                mode="a",
+                header=not os.path.exists("./Data/Data.csv"),
+            )
+        driver.find_element(By.XPATH, value="//a[@aria-label='Next page']").click()
+        # Wait to load (TO DO: implement Wait)
+        time.sleep(2)
+
+        # Javno dostupni podaci o izabranom predmetu, api endpoint:
+        # get_resp("getAllDataDetails")
 
     # quit all tabs! (to quit one tab use driver.close())
     driver.quit()
-
 
     # # Get nbr of pages
     # soup = BeautifulSoup(driver.page_source, "html.parser")
