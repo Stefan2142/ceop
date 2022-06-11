@@ -1,0 +1,29 @@
+{
+	"Investors": [
+		{
+			"SubmissionId": "ae18e06b-93cc-4510-8ad7-2830b11bf059",
+			"EntityTypeId": "Физичко лице",
+			"Name": "Николина Илић",
+			"PlaceName": "Мала Моштаница"
+		}
+	],
+	"Parcels": [
+		{
+			"SubmissionId": "ae18e06b-93cc-4510-8ad7-2830b11bf059",
+			"CadasttralMunicipalityNameSr": "Велика Моштаница",
+			"ParcelNumber": "141/54"
+		}
+	],
+	"Addresses": [
+		{
+			"SubmissionId": "ae18e06b-93cc-4510-8ad7-2830b11bf059"
+		}
+	],
+	"Documents": [
+		{
+			"DocumentTypeName": "Решење о одбацивању - Верзија за објављивање",
+			"DateCreated": "2022-04-04T13:00:02.523",
+			"Path": "/ae18e06b-93cc-4510-8ad7-2830b11bf059/75e18334-d728-4237-984f-4debc162888f/87a8f724-0a84-4e8b-a087-929f0c2bbb69.html.pdf"
+		}
+	]
+}

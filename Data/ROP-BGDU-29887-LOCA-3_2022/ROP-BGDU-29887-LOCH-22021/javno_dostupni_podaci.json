@@ -1,0 +1,26 @@
+{
+	"Investors": [],
+	"Parcels": [
+		{
+			"SubmissionId": "b8ed1828-356f-480d-9029-7f6ced965a47",
+			"CadasttralMunicipalityNameSr": "Велика Моштаница",
+			"ParcelNumber": "1601/1"
+		}
+	],
+	"Addresses": [
+		{
+			"SubmissionId": "b8ed1828-356f-480d-9029-7f6ced965a47",
+			"MunicipalityNameSr": "Београд - Чукарица",
+			"PlaceNameSr": "Велика Моштаница",
+			"Street": "РАДНИЧКА",
+			"House": "6"
+		}
+	],
+	"Documents": [
+		{
+			"DocumentTypeName": "Локацијски услови – Верзија за објављивање",
+			"DateCreated": "2021-12-01T15:04:46.517",
+			"Path": "/b8ed1828-356f-480d-9029-7f6ced965a47/52a2de43-09ab-47c2-874d-9e0407c3e55f/e83350f0-07a9-4543-b03d-3b1f6735965c.html.pdf"
+		}
+	]
+}

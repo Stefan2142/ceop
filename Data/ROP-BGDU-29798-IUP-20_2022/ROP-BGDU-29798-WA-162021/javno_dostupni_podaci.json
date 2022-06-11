@@ -1,0 +1,37 @@
+{
+	"Investors": [
+		{
+			"SubmissionId": "502f1a30-7796-4eed-b30a-d6757a7a1e30",
+			"EntityTypeId": "Правно лице",
+			"Name": "ГРАД БЕОГРАД"
+		}
+	],
+	"Parcels": [
+		{
+			"SubmissionId": "502f1a30-7796-4eed-b30a-d6757a7a1e30",
+			"CadasttralMunicipalityNameSr": "Савски Венац",
+			"ParcelNumber": "1508/346"
+		},
+		{
+			"SubmissionId": "502f1a30-7796-4eed-b30a-d6757a7a1e30",
+			"CadasttralMunicipalityNameSr": "Савски Венац",
+			"ParcelNumber": "1508/350"
+		}
+	],
+	"Addresses": [
+		{
+			"SubmissionId": "502f1a30-7796-4eed-b30a-d6757a7a1e30",
+			"MunicipalityNameSr": "Београд - Савски Венац",
+			"PlaceNameSr": "Београд (Савски Венац)",
+			"Street": "-",
+			"House": "-"
+		}
+	],
+	"Documents": [
+		{
+			"DocumentTypeName": "Потврда о пријави радова - за објављивање",
+			"DateCreated": "2021-03-19T14:54:24.437",
+			"Path": "/502f1a30-7796-4eed-b30a-d6757a7a1e30/67308d10-db56-48c6-ba4c-3f7d5836c763/o.pdf"
+		}
+	]
+}

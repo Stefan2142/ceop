@@ -1,0 +1,23 @@
+{
+	"Investors": [
+		{
+			"SubmissionId": "f9d196f1-d718-4e69-9163-5856f364f8b8",
+			"EntityTypeId": "Правно лице",
+			"Name": "ГРАД БЕОГРАД",
+			"PlaceName": "Београд (Стари Град)"
+		}
+	],
+	"Parcels": [
+		{
+			"SubmissionId": "f9d196f1-d718-4e69-9163-5856f364f8b8",
+			"CadasttralMunicipalityNameSr": "Савски Венац",
+			"ParcelNumber": "1508/346"
+		}
+	],
+	"Addresses": [
+		{
+			"SubmissionId": "f9d196f1-d718-4e69-9163-5856f364f8b8"
+		}
+	],
+	"Documents": []
+}

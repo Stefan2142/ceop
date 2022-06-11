@@ -1,0 +1,22 @@
+{
+	"Investors": [],
+	"Parcels": [
+		{
+			"SubmissionId": "b820cd65-6a8f-4c73-b70f-4fc79c0424fc",
+			"CadasttralMunicipalityNameSr": "Велика Моштаница",
+			"ParcelNumber": "141/54"
+		}
+	],
+	"Addresses": [
+		{
+			"SubmissionId": "b820cd65-6a8f-4c73-b70f-4fc79c0424fc"
+		}
+	],
+	"Documents": [
+		{
+			"DocumentTypeName": "Локацијски услови - Верзија за објављивање",
+			"DateCreated": "2021-12-01T15:13:20.053",
+			"Path": "/b820cd65-6a8f-4c73-b70f-4fc79c0424fc/9317b9f1-bcd5-446e-bd09-66bc486b0eba/ce30808e-c3bc-47a3-98ca-e45eb8b0911e.html.pdf"
+		}
+	]
+}

@@ -1,0 +1,26 @@
+{
+	"Investors": [],
+	"Parcels": [
+		{
+			"SubmissionId": "e6c2c1e8-9691-4c22-9e9f-86fa69340b4c",
+			"CadasttralMunicipalityNameSr": "Земун",
+			"ParcelNumber": "16512"
+		}
+	],
+	"Addresses": [
+		{
+			"SubmissionId": "e6c2c1e8-9691-4c22-9e9f-86fa69340b4c",
+			"MunicipalityNameSr": "Београд - Земун",
+			"PlaceNameSr": "Београд (Земун)",
+			"Street": "ЦАРА ДУШАНА",
+			"House": "224"
+		}
+	],
+	"Documents": [
+		{
+			"DocumentTypeName": "Решење о одбацивању - Верзија за објављивање",
+			"DateCreated": "2020-01-23T15:40:29.497",
+			"Path": "/e6c2c1e8-9691-4c22-9e9f-86fa69340b4c/f8dc69ab-491e-4904-9142-d0acf9043609/o.pdf"
+		}
+	]
+}

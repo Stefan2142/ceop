@@ -1,0 +1,25 @@
+{
+	"Investors": [],
+	"Parcels": [
+		{
+			"SubmissionId": "153a0a49-bf57-46c2-a9f1-74199976975a",
+			"CadasttralMunicipalityNameSr": "Рвати",
+			"ParcelNumber": "1/5"
+		},
+		{
+			"SubmissionId": "153a0a49-bf57-46c2-a9f1-74199976975a",
+			"CadasttralMunicipalityNameSr": "Рвати",
+			"ParcelNumber": "9/2"
+		}
+	],
+	"Addresses": [
+		{
+			"SubmissionId": "153a0a49-bf57-46c2-a9f1-74199976975a",
+			"MunicipalityNameSr": "Београд - Обреновац",
+			"PlaceNameSr": "Обреновац",
+			"Street": "Немањина",
+			"House": "бб"
+		}
+	],
+	"Documents": []
+}

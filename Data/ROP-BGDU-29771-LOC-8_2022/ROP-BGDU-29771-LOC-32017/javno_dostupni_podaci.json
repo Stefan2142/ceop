@@ -1,0 +1,31 @@
+{
+	"Investors": [],
+	"Parcels": [
+		{
+			"SubmissionId": "dc4b7b11-64a2-42ee-b76a-01d3bdc6c260",
+			"CadasttralMunicipalityNameSr": "Рвати",
+			"ParcelNumber": "1/5"
+		},
+		{
+			"SubmissionId": "dc4b7b11-64a2-42ee-b76a-01d3bdc6c260",
+			"CadasttralMunicipalityNameSr": "Рвати",
+			"ParcelNumber": "9/2"
+		}
+	],
+	"Addresses": [
+		{
+			"SubmissionId": "dc4b7b11-64a2-42ee-b76a-01d3bdc6c260",
+			"MunicipalityNameSr": "Београд - Обреновац",
+			"PlaceNameSr": "Обреновац",
+			"Street": "Немањина",
+			"House": "бб"
+		}
+	],
+	"Documents": [
+		{
+			"DocumentTypeName": "Решење о одбацивању - Верзија за објављивање",
+			"DateCreated": "2017-05-22T08:48:27.113",
+			"Path": "/dc4b7b11-64a2-42ee-b76a-01d3bdc6c260/24434bac-76d1-4756-8e92-e88f5a5049a6/o.pdf"
+		}
+	]
+}

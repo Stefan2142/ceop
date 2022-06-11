@@ -1,0 +1,48 @@
+{
+	"Investors": [
+		{
+			"SubmissionId": "af2cd204-bac4-465e-b191-170077947ae0",
+			"EntityTypeId": "Правно лице",
+			"Name": "Електродистрибуција Србије д.о.о. Београд",
+			"PlaceName": "Београд (Нови Београд)"
+		}
+	],
+	"Parcels": [
+		{
+			"SubmissionId": "af2cd204-bac4-465e-b191-170077947ae0",
+			"CadasttralMunicipalityNameSr": "Батајница",
+			"ParcelNumber": "3325/7"
+		},
+		{
+			"SubmissionId": "af2cd204-bac4-465e-b191-170077947ae0",
+			"CadasttralMunicipalityNameSr": "Батајница",
+			"ParcelNumber": "3352/1"
+		},
+		{
+			"SubmissionId": "af2cd204-bac4-465e-b191-170077947ae0",
+			"CadasttralMunicipalityNameSr": "Батајница",
+			"ParcelNumber": "3402"
+		},
+		{
+			"SubmissionId": "af2cd204-bac4-465e-b191-170077947ae0",
+			"CadasttralMunicipalityNameSr": "Батајница",
+			"ParcelNumber": "5506"
+		},
+		{
+			"SubmissionId": "af2cd204-bac4-465e-b191-170077947ae0",
+			"CadasttralMunicipalityNameSr": "Батајница",
+			"ParcelNumber": "5531/2"
+		},
+		{
+			"SubmissionId": "af2cd204-bac4-465e-b191-170077947ae0",
+			"CadasttralMunicipalityNameSr": "Батајница",
+			"ParcelNumber": "5534/3"
+		}
+	],
+	"Addresses": [
+		{
+			"SubmissionId": "af2cd204-bac4-465e-b191-170077947ae0"
+		}
+	],
+	"Documents": []
+}

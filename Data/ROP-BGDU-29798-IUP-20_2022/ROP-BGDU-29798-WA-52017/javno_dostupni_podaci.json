@@ -1,0 +1,36 @@
+{
+	"Investors": [
+		{
+			"SubmissionId": "89b5eaf9-f254-4e17-ab3c-c99aa3ac7f8a",
+			"EntityTypeId": "Правно лице",
+			"Name": "Grad Beograd",
+			"PlaceName": "Београд (Стари Град)"
+		}
+	],
+	"Parcels": [
+		{
+			"SubmissionId": "89b5eaf9-f254-4e17-ab3c-c99aa3ac7f8a",
+			"CadasttralMunicipalityNameSr": "Савски Венац",
+			"ParcelNumber": "1508/346"
+		},
+		{
+			"SubmissionId": "89b5eaf9-f254-4e17-ab3c-c99aa3ac7f8a",
+			"CadasttralMunicipalityNameSr": "Савски Венац",
+			"ParcelNumber": "1508/350"
+		}
+	],
+	"Addresses": [
+		{
+			"SubmissionId": "89b5eaf9-f254-4e17-ab3c-c99aa3ac7f8a",
+			"MunicipalityNameSr": "Београд - Савски Венац",
+			"PlaceNameSr": "Београд (Савски Венац)"
+		}
+	],
+	"Documents": [
+		{
+			"DocumentTypeName": "Грађевинска дозвола - Верзија за објављивање",
+			"DateCreated": "2017-07-14T15:28:56.203",
+			"Path": "/89b5eaf9-f254-4e17-ab3c-c99aa3ac7f8a/ef256816-2bd1-4bda-af7f-c936fd24474f/o.pdf"
+		}
+	]
+}

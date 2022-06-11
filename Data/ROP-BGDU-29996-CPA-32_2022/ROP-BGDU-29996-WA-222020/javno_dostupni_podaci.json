@@ -1,0 +1,26 @@
+{
+	"Investors": [
+		{
+			"SubmissionId": "d4c857af-3ce9-4661-9b64-d63873e08375",
+			"EntityTypeId": "Правно лице",
+			"Name": "PRIVREDNO DRUŠTVO ASTUTA PLUS DOO BEOGRAD (ZEMUN)"
+		}
+	],
+	"Parcels": [
+		{
+			"SubmissionId": "d4c857af-3ce9-4661-9b64-d63873e08375",
+			"CadasttralMunicipalityNameSr": "Земун",
+			"ParcelNumber": "16512"
+		}
+	],
+	"Addresses": [
+		{
+			"SubmissionId": "d4c857af-3ce9-4661-9b64-d63873e08375",
+			"MunicipalityNameSr": "Београд - Земун",
+			"PlaceNameSr": "Београд (Земун)",
+			"Street": "ЦАРА ДУШАНА",
+			"House": "224"
+		}
+	],
+	"Documents": []
+}
