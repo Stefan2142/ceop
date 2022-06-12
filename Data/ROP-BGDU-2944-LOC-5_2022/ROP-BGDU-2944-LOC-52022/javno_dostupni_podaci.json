@@ -1,0 +1,20 @@
+{
+	"Investors": [],
+	"Parcels": [
+		{
+			"SubmissionId": "dc3c7158-8466-428a-b9e4-08732ea4f048",
+			"CadasttralMunicipalityNameSr": "Чукарица",
+			"ParcelNumber": "10276"
+		}
+	],
+	"Addresses": [
+		{
+			"SubmissionId": "dc3c7158-8466-428a-b9e4-08732ea4f048",
+			"MunicipalityNameSr": "Београд - Чукарица",
+			"PlaceNameSr": "Београд (Чукарица)",
+			"Street": "Paštrovićeva",
+			"House": "7"
+		}
+	],
+	"Documents": []
+}

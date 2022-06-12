@@ -1,0 +1,31 @@
+{
+	"Investors": [],
+	"Parcels": [
+		{
+			"SubmissionId": "9c896a81-6f41-47ba-a5eb-3ed19bac794f",
+			"CadasttralMunicipalityNameSr": "Звездара",
+			"ParcelNumber": "2692/8"
+		},
+		{
+			"SubmissionId": "9c896a81-6f41-47ba-a5eb-3ed19bac794f",
+			"CadasttralMunicipalityNameSr": "Звездара",
+			"ParcelNumber": "2696"
+		}
+	],
+	"Addresses": [
+		{
+			"SubmissionId": "9c896a81-6f41-47ba-a5eb-3ed19bac794f",
+			"MunicipalityNameSr": "Београд - Звездара",
+			"PlaceNameSr": "Београд (Звездара)",
+			"Street": "Димитрија Туцовића",
+			"House": "6"
+		}
+	],
+	"Documents": [
+		{
+			"DocumentTypeName": "Локацијски услови – Верзија за објављивање",
+			"DateCreated": "2021-11-02T10:55:04.2",
+			"Path": "/9c896a81-6f41-47ba-a5eb-3ed19bac794f/f5378364-f61d-4bdf-94d2-9820062056be/6d457c57-b580-4353-9e02-5a8a50a0e0b4.html.pdf"
+		}
+	]
+}

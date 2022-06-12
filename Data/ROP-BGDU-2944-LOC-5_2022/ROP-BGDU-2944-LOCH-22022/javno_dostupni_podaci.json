@@ -1,0 +1,26 @@
+{
+	"Investors": [],
+	"Parcels": [
+		{
+			"SubmissionId": "70a08e96-9e3c-4697-a356-609d0840a333",
+			"CadasttralMunicipalityNameSr": "Чукарица",
+			"ParcelNumber": "10276"
+		}
+	],
+	"Addresses": [
+		{
+			"SubmissionId": "70a08e96-9e3c-4697-a356-609d0840a333",
+			"MunicipalityNameSr": "Београд - Чукарица",
+			"PlaceNameSr": "Београд (Чукарица)",
+			"Street": "Paštrovićeva",
+			"House": "7"
+		}
+	],
+	"Documents": [
+		{
+			"DocumentTypeName": "Закључак о одбацивању - Верзија за објављивање",
+			"DateCreated": "2022-04-08T13:02:12.03",
+			"Path": "/70a08e96-9e3c-4697-a356-609d0840a333/350e1399-82bd-49dc-9428-e5384dfd3bf6/72f5e5dc-18e8-4272-815b-44627fde00f9.html.pdf"
+		}
+	]
+}

@@ -1,0 +1,26 @@
+{
+	"Investors": [],
+	"Parcels": [
+		{
+			"SubmissionId": "e5e5e0c4-57e4-44c9-bb22-529507d6768c",
+			"CadasttralMunicipalityNameSr": "Звездара",
+			"ParcelNumber": "2696"
+		}
+	],
+	"Addresses": [
+		{
+			"SubmissionId": "e5e5e0c4-57e4-44c9-bb22-529507d6768c",
+			"MunicipalityNameSr": "Београд - Звездара",
+			"PlaceNameSr": "Београд (Звездара)",
+			"Street": "Димитрија Туцовића",
+			"House": "6"
+		}
+	],
+	"Documents": [
+		{
+			"DocumentTypeName": "Закључак о одбацивању - Верзија за објављивање",
+			"DateCreated": "2021-09-30T09:35:56.697",
+			"Path": "/e5e5e0c4-57e4-44c9-bb22-529507d6768c/9706ac47-5e15-433c-a69f-e5675fe5b1ce/44b2781e-c63d-47e4-bcc3-acd07fb5ba42.html.pdf"
+		}
+	]
+}

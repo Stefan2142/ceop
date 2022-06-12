@@ -1,0 +1,35 @@
+{
+	"Investors": [
+		{
+			"SubmissionId": "ddd72834-7ac2-41d6-90bf-ed96d831164f",
+			"EntityTypeId": "Правно лице",
+			"Name": "Grad Beograd"
+		}
+	],
+	"Parcels": [
+		{
+			"SubmissionId": "ddd72834-7ac2-41d6-90bf-ed96d831164f",
+			"CadasttralMunicipalityNameSr": "Савски Венац",
+			"ParcelNumber": "1508/346"
+		},
+		{
+			"SubmissionId": "ddd72834-7ac2-41d6-90bf-ed96d831164f",
+			"CadasttralMunicipalityNameSr": "Савски Венац",
+			"ParcelNumber": "1508/350"
+		}
+	],
+	"Addresses": [
+		{
+			"SubmissionId": "ddd72834-7ac2-41d6-90bf-ed96d831164f",
+			"MunicipalityNameSr": "Београд - Савски Венац",
+			"PlaceNameSr": "Београд (Савски Венац)"
+		}
+	],
+	"Documents": [
+		{
+			"DocumentTypeName": "Потврда о пријави радова - за објављивање",
+			"DateCreated": "2017-07-25T12:28:31.167",
+			"Path": "/ddd72834-7ac2-41d6-90bf-ed96d831164f/79af49f4-ce92-4580-879e-efbbd00422cc/ooo.pdf"
+		}
+	]
+}

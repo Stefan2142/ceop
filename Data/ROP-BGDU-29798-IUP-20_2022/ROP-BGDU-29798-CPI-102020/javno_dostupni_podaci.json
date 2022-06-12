@@ -1,0 +1,38 @@
+{
+	"Investors": [
+		{
+			"SubmissionId": "17c56266-effd-4d85-b043-850152a2455d",
+			"EntityTypeId": "Правно лице",
+			"Name": "ГРАД БЕОГРАД",
+			"PlaceName": "Београд (Савски Венац)"
+		}
+	],
+	"Parcels": [
+		{
+			"SubmissionId": "17c56266-effd-4d85-b043-850152a2455d",
+			"CadasttralMunicipalityNameSr": "Савски Венац",
+			"ParcelNumber": "1508/346"
+		},
+		{
+			"SubmissionId": "17c56266-effd-4d85-b043-850152a2455d",
+			"CadasttralMunicipalityNameSr": "Савски Венац",
+			"ParcelNumber": "1508/350"
+		}
+	],
+	"Addresses": [
+		{
+			"SubmissionId": "17c56266-effd-4d85-b043-850152a2455d",
+			"MunicipalityNameSr": "Београд - Савски Венац",
+			"PlaceNameSr": "Београд (Савски Венац)",
+			"Street": "-",
+			"House": "-"
+		}
+	],
+	"Documents": [
+		{
+			"DocumentTypeName": "Решење о одбацивању - Верзија за објављивање",
+			"DateCreated": "2020-06-19T12:37:49.75",
+			"Path": "/17c56266-effd-4d85-b043-850152a2455d/da59a683-f580-4a17-be91-ede690b38bfd/o.pdf"
+		}
+	]
+}

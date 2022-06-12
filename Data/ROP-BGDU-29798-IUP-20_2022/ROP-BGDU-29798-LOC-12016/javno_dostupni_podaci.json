@@ -1,0 +1,29 @@
+{
+	"Investors": [],
+	"Parcels": [
+		{
+			"SubmissionId": "7b891b05-a994-44cc-9cdf-b89f08259972",
+			"CadasttralMunicipalityNameSr": "Савски Венац",
+			"ParcelNumber": "1508/346"
+		},
+		{
+			"SubmissionId": "7b891b05-a994-44cc-9cdf-b89f08259972",
+			"CadasttralMunicipalityNameSr": "Савски Венац",
+			"ParcelNumber": "1508/350"
+		}
+	],
+	"Addresses": [
+		{
+			"SubmissionId": "7b891b05-a994-44cc-9cdf-b89f08259972",
+			"MunicipalityNameSr": "Београд - Савски Венац",
+			"PlaceNameSr": "Београд (Савски Венац)"
+		}
+	],
+	"Documents": [
+		{
+			"DocumentTypeName": "Локацијски услови - Верзија за објављивање",
+			"DateCreated": "2016-12-09T14:25:55.717",
+			"Path": "/7b891b05-a994-44cc-9cdf-b89f08259972/0a27ac12-73eb-48e8-95ab-64c06f69f4ba/o.pdf"
+		}
+	]
+}

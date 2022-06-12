@@ -1,0 +1,20 @@
+{
+	"Investors": [],
+	"Parcels": [
+		{
+			"SubmissionId": "1514023a-551e-40e8-80ee-c4f106c0deaa",
+			"CadasttralMunicipalityNameSr": "Велика Моштаница",
+			"ParcelNumber": "1601/1"
+		}
+	],
+	"Addresses": [
+		{
+			"SubmissionId": "1514023a-551e-40e8-80ee-c4f106c0deaa",
+			"MunicipalityNameSr": "Београд - Чукарица",
+			"PlaceNameSr": "Велика Моштаница",
+			"Street": "РАДНИЧКА",
+			"House": "6"
+		}
+	],
+	"Documents": []
+}

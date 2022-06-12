@@ -1,0 +1,35 @@
+{
+	"Investors": [
+		{
+			"SubmissionId": "934c220b-4cd7-4d1f-8e8c-3b112688d951",
+			"EntityTypeId": "Правно лице",
+			"Name": "Grad Beograd"
+		}
+	],
+	"Parcels": [
+		{
+			"SubmissionId": "934c220b-4cd7-4d1f-8e8c-3b112688d951",
+			"CadasttralMunicipalityNameSr": "Савски Венац",
+			"ParcelNumber": "1508/346"
+		},
+		{
+			"SubmissionId": "934c220b-4cd7-4d1f-8e8c-3b112688d951",
+			"CadasttralMunicipalityNameSr": "Савски Венац",
+			"ParcelNumber": "1508/350"
+		}
+	],
+	"Addresses": [
+		{
+			"SubmissionId": "934c220b-4cd7-4d1f-8e8c-3b112688d951",
+			"MunicipalityNameSr": "Београд - Савски Венац",
+			"PlaceNameSr": "Београд (Савски Венац)"
+		}
+	],
+	"Documents": [
+		{
+			"DocumentTypeName": "Решење о одбацивању - Верзија за објављивање",
+			"DateCreated": "2017-07-13T09:56:34.1",
+			"Path": "/934c220b-4cd7-4d1f-8e8c-3b112688d951/98b07275-01b3-47b6-ad54-67a4e0e75848/o.pdf"
+		}
+	]
+}

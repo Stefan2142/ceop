@@ -1,0 +1,31 @@
+{
+	"Investors": [],
+	"Parcels": [
+		{
+			"SubmissionId": "373d6745-108a-472a-930a-2e6d9df5fdd2",
+			"CadasttralMunicipalityNameSr": "Рвати",
+			"ParcelNumber": "1/5"
+		},
+		{
+			"SubmissionId": "373d6745-108a-472a-930a-2e6d9df5fdd2",
+			"CadasttralMunicipalityNameSr": "Рвати",
+			"ParcelNumber": "9/2"
+		}
+	],
+	"Addresses": [
+		{
+			"SubmissionId": "373d6745-108a-472a-930a-2e6d9df5fdd2",
+			"MunicipalityNameSr": "Београд - Обреновац",
+			"PlaceNameSr": "Рвати",
+			"Street": "Немањина",
+			"House": "бб"
+		}
+	],
+	"Documents": [
+		{
+			"DocumentTypeName": "Локацијски услови - Верзија за објављивање",
+			"DateCreated": "2020-02-24T13:36:38.573",
+			"Path": "/373d6745-108a-472a-930a-2e6d9df5fdd2/117b9b99-3257-4248-91ee-ff11b987e715/o.pdf"
+		}
+	]
+}

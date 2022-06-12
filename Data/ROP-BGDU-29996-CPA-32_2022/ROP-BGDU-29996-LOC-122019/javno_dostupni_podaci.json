@@ -1,0 +1,26 @@
+{
+	"Investors": [],
+	"Parcels": [
+		{
+			"SubmissionId": "d40a5a28-9694-4942-8216-db8b3546f570",
+			"CadasttralMunicipalityNameSr": "Земун",
+			"ParcelNumber": "16512"
+		}
+	],
+	"Addresses": [
+		{
+			"SubmissionId": "d40a5a28-9694-4942-8216-db8b3546f570",
+			"MunicipalityNameSr": "Београд - Земун",
+			"PlaceNameSr": "Београд (Земун)",
+			"Street": "цара душана",
+			"House": "224"
+		}
+	],
+	"Documents": [
+		{
+			"DocumentTypeName": "Локацијски услови - Верзија за објављивање",
+			"DateCreated": "2019-10-10T14:36:26.66",
+			"Path": "/d40a5a28-9694-4942-8216-db8b3546f570/6a056813-3aa0-4c64-861d-f960970e36eb/o.pdf"
+		}
+	]
+}

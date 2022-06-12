@@ -1,0 +1,33 @@
+{
+	"Investors": [
+		{
+			"SubmissionId": "ec1a02d9-fdcd-49e6-af72-b0b762161d90",
+			"EntityTypeId": "Правно лице",
+			"Name": "ECSTATIKA DT DOO BEOGRAD",
+			"PlaceName": "Београд (Стари Град)"
+		}
+	],
+	"Parcels": [
+		{
+			"SubmissionId": "ec1a02d9-fdcd-49e6-af72-b0b762161d90",
+			"CadasttralMunicipalityNameSr": "Звездара",
+			"ParcelNumber": "21916"
+		}
+	],
+	"Addresses": [
+		{
+			"SubmissionId": "ec1a02d9-fdcd-49e6-af72-b0b762161d90",
+			"MunicipalityNameSr": "Београд - Звездара",
+			"PlaceNameSr": "Београд (Звездара)",
+			"Street": "Димитрија Туцовића",
+			"House": "6"
+		}
+	],
+	"Documents": [
+		{
+			"DocumentTypeName": "Решење о одбaцивању захтева - Верзија за објављивање    ",
+			"DateCreated": "2022-03-24T14:41:22",
+			"Path": "/ec1a02d9-fdcd-49e6-af72-b0b762161d90/e5602954-1975-4b99-9c93-3c336d79104d/61e9cee1-53c2-43a7-8946-3b5befd9f282.html.pdf"
+		}
+	]
+}

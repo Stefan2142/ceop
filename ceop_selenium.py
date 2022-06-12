@@ -1,61 +1,31 @@
+#!/usr/bin/python
+# -*- encoding: utf-8 -*-
 import os, time
 import traceback
-from selenium import webdriver
-from selenium.webdriver.common.by import By
-from selenium.webdriver.support.ui import WebDriverWait
-from selenium.webdriver.common.keys import Keys
-from selenium.webdriver.support import expected_conditions as EC
 from bs4 import BeautifulSoup
 import pandas as pd
 from pathlib import Path
+import json
+from utils_selenium import *
+from selenium.webdriver.common.by import By
+import requests
+from tenacity import retry, wait_fixed
 
-
-def get_element(node):
-    # for XPATH we have to count only for nodes with same type!
-    length = len(list(node.previous_siblings)) + 1
-    if (length) > 1:
-        return "%s" % (node.name)
-    else:
-        return node.name
-
-
-def get_css_path(node):
-    path = [get_element(node)]
-    for parent in node.parents:
-        if parent.name == "html":
-            break
-        path.insert(0, get_element(parent))
-    return " > ".join(path)
-
-
-def get_driver():
-    chrome_options = webdriver.ChromeOptions()
-    prefs = {
-        "profile.default_content_setting_values.notifications": 2,
-        "download.prompt_for_download": False,
-        "profile.default_content_setting_values.automatic_downloads": 1,
-        "profile.default_content_setting_values.geolocation": 2,
-    }
-
-    chrome_options.add_experimental_option("prefs", prefs)
-    chrome_options.add_argument("--start-maximized")
-    chrome_options.add_argument("--no-sandbox")
-    # chrome_options.add_argument("--headless")
-    # chrome_options.add_argument("--window-size=1536,865")
-
-    driver = webdriver.Chrome(
-        executable_path="./chromedriver.exe", chrome_options=chrome_options
-    )
-    return driver
+WEBDRIVER_DELAY = 30
+SMALLER_DELAY = 3
+DATA_DIR = "./Data"
+# Error pop-up
+# "Грешка"
+# driver.find_element(by= By.CLASS_NAME, value = 'popupc').find_element(by= By.TAG_NAME, value = 'button').click()
 
 
 def main():
-    Path('./Data').mkdir(parents=True, exist_ok=True)
-    
+    Path(f"{DATA_DIR}").mkdir(parents=True, exist_ok=True)
+
     driver = get_driver()
     driver.get("https://ceop.apr.gov.rs/ceopweb/sr-cyrl/home")
 
-    WebDriverWait(driver, 10).until(
+    WebDriverWait(driver, WEBDRIVER_DELAY).until(
         EC.presence_of_element_located((By.XPATH, '//*[@id="query"]'))
     )
     query_el = driver.find_element(by=By.XPATH, value='//*[@id="query"]')
@@ -70,51 +40,154 @@ def main():
             (By.CLASS_NAME, "table--mobile.table--rowHover.t1")
         )
     )
-    # Get nbr of pages
+
+    @retry(wait=wait_fixed(2))
+    def get_resp(api_endpoint):
+        logs_raw = driver.get_log("performance")
+        logs = [json.loads(lr["message"])["message"] for lr in logs_raw]
+        logs = [x for x in logs if "response" in x["params"]]
+        logs = [
+            x
+            for x in logs
+            if x["method"] == "Network.responseReceived"
+            and "json" in x["params"]["response"]["mimeType"]
+        ]
+        logs = [x for x in logs if api_endpoint in x["params"]["response"]["url"]]
+
+        log = list(logs)[0]
+        request_id = log["params"]["requestId"]
+        resp_url = log["params"]["response"]["url"]
+        print(f"Caught {resp_url}")
+        resp_json = json.loads(
+            driver.execute_cdp_cmd(
+                "Network.getResponseBody", {"requestId": request_id}
+            )["body"]
+        )
+        return resp_json
+
     soup = BeautifulSoup(driver.page_source, "html.parser")
     nbr_of_pages = int(
         soup.find("li", {"class": "ellipsis"})
         .next_sibling.text.split("page")[-1]
         .strip()
     )
+    for page in range(0, 3):
+        response_json = get_resp("searchString")
 
-    main_table = soup.find("table", {"class": "table--mobile table--rowHover t1"})
-    main_rows = main_table.find_all("tr")
+        # df = pd.DataFrame(response_json["ResultList"])
 
-    # First two are part of table header
-    for row in main_rows[2:]:
+        # Predmeti
+        for submission_id in response_json["ResultList"]:
+            submission_name = submission_id["ParentLegalUniqueNumber"].replace("/", "_")
 
-        # Broj predmeta (eg: ROP-BGDU-2944-LOC-3/2022')
-        row_id = row.td.span.text.replace("/", "-")
+            Path(f"{DATA_DIR}/{submission_name}").mkdir(parents=True, exist_ok=True)
+            with open(
+                f"{DATA_DIR}/{submission_name}/{submission_name}.json",
+                "w",
+                encoding="utf-8",
+            ) as f:
+                f.write(json.dumps(submission_id, ensure_ascii=False, indent="\t"))
+            row_id = response_json["ResultList"].index(submission_id)
+            print(f"Clicked on row {row_id}")
 
-        # Get css selector of a current row and use it for 'click' event
-        css_selector = get_css_path(row) + f":nth-child({main_rows.index(row)})"
-        driver.find_element(by=By.CSS_SELECTOR, value=css_selector).click()
+            driver.find_element(
+                by=By.CSS_SELECTOR,
+                value=f"body > rd-app > div > rd-home > div > rd-search > div > div > div > table > tbody > tr:nth-child({row_id+2})",
+            ).click()
 
-        # Wait to load (TO DO: implement Wait)
-        time.sleep(1)
+            # Wait to load (TO DO: implement Wait)
+            time.sleep(SMALLER_DELAY)
 
-        # Resulting table of a clicked row
-        inner_table_el = driver.find_element(
-            by=By.CLASS_NAME, value="table--mobile.table--rowHover.t1.tree"
-        )
+            # Lista predmeta u dosijeu
+            submission_resp = get_resp("getAllCaseDetails")
+            print(
+                f"Found: {len(submission_resp)} cases for {submission_id['SubmissionId']}"
+            )
 
-        # Convert it to html to load it iinto pandas
-        parent_table_el = inner_table_el.find_element(by = By.XPATH, value="..")
-        parent_table_el_html = parent_table_el.get_attribute("innerHTML")
+            for inner_submission in submission_resp:
+                inner_submission_name = inner_submission["LegalUniqueNumber"].replace(
+                    "/", ""
+                )
+                Path(f"{DATA_DIR}/{submission_name}/{inner_submission_name}").mkdir(
+                    parents=True, exist_ok=True
+                )
+                with open(
+                    f"{DATA_DIR}/{submission_name}/{inner_submission_name}/{inner_submission_name}.json",
+                    "w",
+                    encoding="utf-8",
+                ) as f:
+                    f.write(
+                        json.dumps(inner_submission, ensure_ascii=False, indent="\t")
+                    )
 
-        # pd.read_html will convert parent_table_el_html
-        # into two dfs, we need first one
-        html_df = pd.read_html(parent_table_el_html)[0]
-        html_df.to_csv(f"./Data/{row_id}.csv", index=False, encoding="utf8")
+                WebDriverWait(driver, WEBDRIVER_DELAY).until(
+                    EC.presence_of_element_located(
+                        (By.XPATH, "//*[contains(text(), 'Надлежни орган')]")
+                    )
+                )
 
-    # Used for pagination
-    next_page_el = driver.find_element(By.XPATH, value="//a[@aria-label='Next page']")
+                inner_table_el = driver.find_element(
+                    by=By.CLASS_NAME, value="table--mobile.table--rowHover.t1.tree"
+                )
 
-    # Non visible on first page
-    # previous_page_el = driver.find_element(By.XPATH, value="//a[@aria-label='Previous page']")
+                if submission_resp.index(inner_submission) == 0:
+                    inner_table_el.find_element(
+                        by=By.CSS_SELECTOR,
+                        value="tr.selected.main",
+                    ).click()
+                else:
+                    inner_table_el.find_element(
+                        by=By.CSS_SELECTOR,
+                        value=f"tr:nth-child({submission_resp.index(inner_submission)+1})",
+                    ).click()
 
-    raise ("End")
+                # Wait for 'javno dostupni podaci u izabranom predmetu' to load
+                WebDriverWait(driver, WEBDRIVER_DELAY).until(
+                    EC.presence_of_element_located(
+                        (By.XPATH, "//*[contains(text(), 'ИЗДАТА РЕШЕЊА')]")
+                    )
+                )
+
+                javno_dostupni_podaci = get_resp("getAllDataDetails")
+
+                # Download pdf if present
+                if javno_dostupni_podaci["Documents"]:
+                    url = f"https://ceop.apr.gov.rs/eregistrationportal/Public/Manage/LoadRepositoryDocument?fileId={javno_dostupni_podaci['Documents'][0]['Path'].split('/')[2]}"
+                    response = requests.request("GET", url)
+
+                    with open(
+                        f"{DATA_DIR}/{submission_name}/{inner_submission_name}/{javno_dostupni_podaci['Documents'][0]['DocumentTypeName']}.pdf",
+                        "wb",
+                    ) as f:
+                        f.write(response.content)
+
+                with open(
+                    f"{DATA_DIR}/{submission_name}/{inner_submission_name}/javno_dostupni_podaci.json",
+                    "w",
+                    encoding="utf-8",
+                ) as f:
+                    f.write(
+                        json.dumps(
+                            javno_dostupni_podaci, ensure_ascii=False, indent="\t"
+                        )
+                    )
+
+        
+        # Next page:
+        # driver.find_element(By.XPATH, value="//a[@aria-label='Next page']").click()
+        # # Wait to load (TO DO: implement Wait)
+        # time.sleep(2)
+
+    # quit all tabs! (to quit one tab use driver.close())
+    driver.quit()
+
+    # # Used for pagination
+    # next_page_el = driver.find_element(By.XPATH, value="//a[@aria-label='Next page']")
+
+    # # Non visible on first page
+    # # previous_page_el = driver.find_element(By.XPATH, value="//a[@aria-label='Previous page']")
+
+    # raise ("End")
 
 
 if __name__ == "__main__":

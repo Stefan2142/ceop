@@ -1,0 +1,22 @@
+{
+	"Investors": [],
+	"Parcels": [
+		{
+			"SubmissionId": "f7b5a79e-29ec-4a42-88ce-f86cc3194d90",
+			"CadasttralMunicipalityNameSr": "Велика Моштаница",
+			"ParcelNumber": "141/54"
+		}
+	],
+	"Addresses": [
+		{
+			"SubmissionId": "f7b5a79e-29ec-4a42-88ce-f86cc3194d90"
+		}
+	],
+	"Documents": [
+		{
+			"DocumentTypeName": "Закључак о одбацивању - Верзија за објављивање",
+			"DateCreated": "2022-05-06T15:30:14.587",
+			"Path": "/f7b5a79e-29ec-4a42-88ce-f86cc3194d90/22ce5ae0-6946-4a2b-a883-246bc8c27571/ad92d640-31cd-4fb6-9223-9e7f7ad65610.html.pdf"
+		}
+	]
+}
