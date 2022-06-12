@@ -1,0 +1,63 @@
+{
+	"Investors": [
+		{
+			"SubmissionId": "f4ab996d-db08-411a-ba4b-3d85407feb37",
+			"EntityTypeId": "Правно лице",
+			"Name": "MAT INŽENJERING 2020 D.O.O. BEOGRAD-Zvezdara",
+			"PlaceName": "Београд (Звездара)"
+		},
+		{
+			"SubmissionId": "f4ab996d-db08-411a-ba4b-3d85407feb37",
+			"EntityTypeId": "Правно лице",
+			"Name": "SIGMA STAN DOO BEOGRAD-VOŽDOVAC",
+			"PlaceName": "Београд (Вождовац)"
+		},
+		{
+			"SubmissionId": "f4ab996d-db08-411a-ba4b-3d85407feb37",
+			"EntityTypeId": "Физичко лице",
+			"Name": "Adrija Vlajković",
+			"PlaceName": "Ваљево"
+		},
+		{
+			"SubmissionId": "f4ab996d-db08-411a-ba4b-3d85407feb37",
+			"EntityTypeId": "Физичко лице",
+			"Name": "Dobrila Blagojević",
+			"PlaceName": "Београд (Звездара)"
+		},
+		{
+			"SubmissionId": "f4ab996d-db08-411a-ba4b-3d85407feb37",
+			"EntityTypeId": "Физичко лице",
+			"Name": "Fatima Abdurahmani",
+			"PlaceName": "Београд (Звездара)"
+		},
+		{
+			"SubmissionId": "f4ab996d-db08-411a-ba4b-3d85407feb37",
+			"EntityTypeId": "Физичко лице",
+			"Name": "Milovan Simić",
+			"PlaceName": "Рујевац"
+		},
+		{
+			"SubmissionId": "f4ab996d-db08-411a-ba4b-3d85407feb37",
+			"EntityTypeId": "Физичко лице",
+			"Name": "Zoran Vorković",
+			"PlaceName": "Београд (Звездара)"
+		}
+	],
+	"Parcels": [
+		{
+			"SubmissionId": "f4ab996d-db08-411a-ba4b-3d85407feb37",
+			"CadasttralMunicipalityNameSr": "Звездара",
+			"ParcelNumber": "2950"
+		}
+	],
+	"Addresses": [
+		{
+			"SubmissionId": "f4ab996d-db08-411a-ba4b-3d85407feb37",
+			"MunicipalityNameSr": "Београд - Звездара",
+			"PlaceNameSr": "Београд (Звездара)",
+			"Street": "БАЊСКА",
+			"House": "11"
+		}
+	],
+	"Documents": []
+}

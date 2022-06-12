@@ -1,0 +1,26 @@
+{
+	"Investors": [],
+	"Parcels": [
+		{
+			"SubmissionId": "5b560a36-02f7-4679-9225-a7fc37cf03a5",
+			"CadasttralMunicipalityNameSr": "Звездара",
+			"ParcelNumber": "2950"
+		}
+	],
+	"Addresses": [
+		{
+			"SubmissionId": "5b560a36-02f7-4679-9225-a7fc37cf03a5",
+			"MunicipalityNameSr": "Београд - Звездара",
+			"PlaceNameSr": "Београд (Звездара)",
+			"Street": "Бањска",
+			"House": "11"
+		}
+	],
+	"Documents": [
+		{
+			"DocumentTypeName": "Локацијски услови - Верзија за објављивање",
+			"DateCreated": "2020-03-18T16:48:54.58",
+			"Path": "/5b560a36-02f7-4679-9225-a7fc37cf03a5/9cc0c6b6-c666-4dd5-8d46-fabb7d7af8dc/o.pdf"
+		}
+	]
+}

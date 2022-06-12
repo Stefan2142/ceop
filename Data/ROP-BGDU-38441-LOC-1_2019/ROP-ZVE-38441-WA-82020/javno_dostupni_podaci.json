@@ -1,0 +1,62 @@
+{
+	"Investors": [
+		{
+			"SubmissionId": "42729703-7fe5-4158-902b-7e1f5d8b519e",
+			"EntityTypeId": "Правно лице",
+			"Name": "MAT INŽENJERING 2020 D.O.O. BEOGRAD-Zvezdara"
+		},
+		{
+			"SubmissionId": "42729703-7fe5-4158-902b-7e1f5d8b519e",
+			"EntityTypeId": "Правно лице",
+			"Name": "SIGMA STAN DOO BEOGRAD-VOŽDOVAC"
+		},
+		{
+			"SubmissionId": "42729703-7fe5-4158-902b-7e1f5d8b519e",
+			"EntityTypeId": "Физичко лице",
+			"Name": "Андрија Влајковић"
+		},
+		{
+			"SubmissionId": "42729703-7fe5-4158-902b-7e1f5d8b519e",
+			"EntityTypeId": "Физичко лице",
+			"Name": "Добрила Благојевић"
+		},
+		{
+			"SubmissionId": "42729703-7fe5-4158-902b-7e1f5d8b519e",
+			"EntityTypeId": "Физичко лице",
+			"Name": "Зоран Ворковић"
+		},
+		{
+			"SubmissionId": "42729703-7fe5-4158-902b-7e1f5d8b519e",
+			"EntityTypeId": "Физичко лице",
+			"Name": "Милован Симић"
+		},
+		{
+			"SubmissionId": "42729703-7fe5-4158-902b-7e1f5d8b519e",
+			"EntityTypeId": "Физичко лице",
+			"Name": "Фатима Абдурахмани"
+		}
+	],
+	"Parcels": [
+		{
+			"SubmissionId": "42729703-7fe5-4158-902b-7e1f5d8b519e",
+			"CadasttralMunicipalityNameSr": "Звездара",
+			"ParcelNumber": "2950"
+		}
+	],
+	"Addresses": [
+		{
+			"SubmissionId": "42729703-7fe5-4158-902b-7e1f5d8b519e",
+			"MunicipalityNameSr": "Београд - Звездара",
+			"PlaceNameSr": "Београд (Звездара)",
+			"Street": "БАЊСКА",
+			"House": "11"
+		}
+	],
+	"Documents": [
+		{
+			"DocumentTypeName": "Потврда о пријави радова - за објављивање",
+			"DateCreated": "2020-11-12T14:49:06.79",
+			"Path": "/42729703-7fe5-4158-902b-7e1f5d8b519e/f54b0f82-19e1-4b80-ade0-a3044ae38330/20725-2020 - potvrda prijava radova SIGMA stan.pdf"
+		}
+	]
+}

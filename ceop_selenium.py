@@ -30,7 +30,8 @@ def main():
     )
     query_el = driver.find_element(by=By.XPATH, value='//*[@id="query"]')
     # Insert search query
-    query_el.send_keys("ROP-BGDU-29")
+    # query_el.send_keys("ROP-BGDU-29")
+    query_el.send_keys("ROP-BGDU-38441-")
 
     # Click on search
     query_el.send_keys(Keys.ENTER)
@@ -66,12 +67,15 @@ def main():
         return resp_json
 
     soup = BeautifulSoup(driver.page_source, "html.parser")
-    nbr_of_pages = int(
-        soup.find("li", {"class": "ellipsis"})
-        .next_sibling.text.split("page")[-1]
-        .strip()
-    )
-    for page in range(0, 3):
+    try:
+        nbr_of_pages = int(
+            soup.find("li", {"class": "ellipsis"})
+            .next_sibling.text.split("page")[-1]
+            .strip()
+        )
+    except:
+        nbr_of_pages = 1
+    for page in range(0, nbr_of_pages):
         response_json = get_resp("searchString")
 
         # df = pd.DataFrame(response_json["ResultList"])
@@ -104,6 +108,15 @@ def main():
                 f"Found: {len(submission_resp)} cases for {submission_id['SubmissionId']}"
             )
 
+            # Table: Сви повезани предмети у досијеу
+            inner_table_el = driver.find_element(
+                by=By.CLASS_NAME, value="table--mobile.table--rowHover.t1.tree"
+            )
+            # 0th element is header, skip it
+            inner_table_rows = inner_table_el.find_elements(by=By.TAG_NAME, value="tr")[
+                1:
+            ]
+
             for inner_submission in submission_resp:
                 inner_submission_name = inner_submission["LegalUniqueNumber"].replace(
                     "/", ""
@@ -125,21 +138,7 @@ def main():
                         (By.XPATH, "//*[contains(text(), 'Надлежни орган')]")
                     )
                 )
-
-                inner_table_el = driver.find_element(
-                    by=By.CLASS_NAME, value="table--mobile.table--rowHover.t1.tree"
-                )
-
-                if submission_resp.index(inner_submission) == 0:
-                    inner_table_el.find_element(
-                        by=By.CSS_SELECTOR,
-                        value="tr.selected.main",
-                    ).click()
-                else:
-                    inner_table_el.find_element(
-                        by=By.CSS_SELECTOR,
-                        value=f"tr:nth-child({submission_resp.index(inner_submission)+1})",
-                    ).click()
+                inner_table_rows[submission_resp.index(inner_submission)].click()
 
                 # Wait for 'javno dostupni podaci u izabranom predmetu' to load
                 WebDriverWait(driver, WEBDRIVER_DELAY).until(
@@ -172,11 +171,13 @@ def main():
                         )
                     )
 
-        
         # Next page:
-        # driver.find_element(By.XPATH, value="//a[@aria-label='Next page']").click()
+        try:
+            driver.find_element(By.XPATH, value="//a[@aria-label='Next page']").click()
+        except:
+            raise Exception("Couldnt find next page element to click")
         # # Wait to load (TO DO: implement Wait)
-        # time.sleep(2)
+        time.sleep(2)
 
     # quit all tabs! (to quit one tab use driver.close())
     driver.quit()

@@ -1,0 +1,26 @@
+{
+	"Investors": [],
+	"Parcels": [
+		{
+			"SubmissionId": "3e6aa63b-8548-438d-905d-aac8154c530b",
+			"CadasttralMunicipalityNameSr": "Звездара",
+			"ParcelNumber": "2950"
+		}
+	],
+	"Addresses": [
+		{
+			"SubmissionId": "3e6aa63b-8548-438d-905d-aac8154c530b",
+			"MunicipalityNameSr": "Београд - Звездара",
+			"PlaceNameSr": "Београд (Звездара)",
+			"Street": "Бањска",
+			"House": "11"
+		}
+	],
+	"Documents": [
+		{
+			"DocumentTypeName": "Решење о одбацивању - Верзија за објављивање",
+			"DateCreated": "2020-01-17T15:58:30.647",
+			"Path": "/3e6aa63b-8548-438d-905d-aac8154c530b/9f32d937-992e-4e1c-a3ae-f238d4d12af2/o.pdf"
+		}
+	]
+}

@@ -1,0 +1,62 @@
+{
+	"Investors": [
+		{
+			"SubmissionId": "d2f23c7d-5b2e-48a8-b15d-f5209ffa8f00",
+			"EntityTypeId": "Правно лице",
+			"Name": "MAT INŽENJERING 2020 D.O.O. BEOGRAD-Zvezdara"
+		},
+		{
+			"SubmissionId": "d2f23c7d-5b2e-48a8-b15d-f5209ffa8f00",
+			"EntityTypeId": "Правно лице",
+			"Name": "SIGMA STAN DOO BEOGRAD-VOŽDOVAC"
+		},
+		{
+			"SubmissionId": "d2f23c7d-5b2e-48a8-b15d-f5209ffa8f00",
+			"EntityTypeId": "Физичко лице",
+			"Name": "Андрија Влајковић"
+		},
+		{
+			"SubmissionId": "d2f23c7d-5b2e-48a8-b15d-f5209ffa8f00",
+			"EntityTypeId": "Физичко лице",
+			"Name": "Добрила Благојевић"
+		},
+		{
+			"SubmissionId": "d2f23c7d-5b2e-48a8-b15d-f5209ffa8f00",
+			"EntityTypeId": "Физичко лице",
+			"Name": "Зоран Ворковић"
+		},
+		{
+			"SubmissionId": "d2f23c7d-5b2e-48a8-b15d-f5209ffa8f00",
+			"EntityTypeId": "Физичко лице",
+			"Name": "Милован Симић"
+		},
+		{
+			"SubmissionId": "d2f23c7d-5b2e-48a8-b15d-f5209ffa8f00",
+			"EntityTypeId": "Физичко лице",
+			"Name": "Фатима Абдурахмани"
+		}
+	],
+	"Parcels": [
+		{
+			"SubmissionId": "d2f23c7d-5b2e-48a8-b15d-f5209ffa8f00",
+			"CadasttralMunicipalityNameSr": "Звездара",
+			"ParcelNumber": "2950"
+		}
+	],
+	"Addresses": [
+		{
+			"SubmissionId": "d2f23c7d-5b2e-48a8-b15d-f5209ffa8f00",
+			"MunicipalityNameSr": "Београд - Звездара",
+			"PlaceNameSr": "Београд (Звездара)",
+			"Street": "Бањска",
+			"House": "11"
+		}
+	],
+	"Documents": [
+		{
+			"DocumentTypeName": "Решење о одбацивању - Верзија за објављивање",
+			"DateCreated": "2020-10-12T08:41:42.04",
+			"Path": "/d2f23c7d-5b2e-48a8-b15d-f5209ffa8f00/84f8a616-a18d-4793-b545-da55769e5c80/javljivanje_351-20315.2020 rešenje.odbacivanje.pdf"
+		}
+	]
+}
